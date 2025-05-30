@@ -680,13 +680,15 @@ h3.my-profession {
   margin: 15px 0 5px;
 }
 
-.contact .contact-info-item p, .contact .contact-info-item p a{
+.contact .contact-info-item p{
   font-size: 16px;
   line-height: 25px;
   color: var(--text-black-700);
   font-weight: 400;
 }
-
+.contact .contact-info-item .linkedin{
+    color: var(--text-black-700);
+}
 .contact-form-box {
   background-color: var(--bg-black-100);
   padding: 30px;
@@ -733,8 +735,4 @@ h3.my-profession {
 
 
 
-.form-item button:hover{
- border: 1px solid #fff !important;
- cursor: pointer;
 
-}
