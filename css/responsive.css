@@ -1,0 +1,365 @@
+/* RESPONSIVE ASIDE FOR MOBILE */
+@media (max-width: 991px) {
+  .aside {
+    left: -270px;
+    transition: left 0.3s ease;
+  }
+
+  .aside.open {
+    left: 0;
+  }
+
+  .nav-toggler {
+    display: flex !important;
+  }
+
+  .main-content {
+    padding-left: 0;
+    transition: margin-left 0.3s ease;
+  }
+
+  .section.shift {
+    margin-left: 270px;
+  }
+
+  .nav-toggler {
+    position: fixed;
+    left: 15px;
+    top: 15px;
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 5px;
+    z-index: 100;
+  }
+}
+/* Initially hide aside on small screens */
+@media (max-width: 768px) {
+  .aside {
+    position: fixed;
+    left: -250px;
+    top: 0;
+    width: 250px;
+    height: 100%;
+    background: var(--bg-black-100);
+    transition: left 0.3s ease;
+    z-index: 999;
+  }
+
+  .aside.open {
+    left: 0;
+  }
+
+  .nav-toggler {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    cursor: pointer;
+    z-index: 1000;
+  }
+
+  .section {
+    transition: margin-left 0.3s ease;
+  }
+
+  .aside-open .section {
+    margin-left: 250px;
+  }
+}
+
+/* =========================== */
+/* responsive home  */
+@media (max-width: 991px) {
+  .home {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .home .home-info {
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding: 15px 0;
+  }
+
+  .home .home-img img {
+    display: none;
+  }
+
+  h3.hello,
+  h3.my-profession {
+    font-size: 24px;
+  }
+
+  h3.hello span,
+  h3.my-profession span {
+    font-size: 26px;
+  }
+
+  .home-info p {
+    font-size: 16px;
+    margin-bottom: 40px;
+    padding: 0 10px;
+  }
+
+  .btn.hire-me {
+    padding: 10px 25px;
+    font-size: 14px;
+  }
+
+  .home-img::before,
+  .home-img::after {
+    display: none; /* Hide decorative corners on small screens */
+  }
+}
+
+@media (max-width: 576px) {
+  .home .home-img img {
+    display: none;
+  }
+
+  h3.hello,
+  h3.my-profession {
+    font-size: 20px;
+  }
+
+  h3.hello span,
+  h3.my-profession span {
+    font-size: 22px;
+  }
+}
+
+/* ==================================== */
+/* responsive about */
+@media (max-width: 991px) {
+  .about .about-content .personal-info,
+  .about .about-content .skills,
+  .about .about-content .certifications,
+  .about .about-content .experience {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .about .about-content .info-item {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+
+  .about .about-content .timeline {
+    padding: 20px 10px;
+  }
+
+  .about .about-content .timeline .timeline-item {
+    padding-left: 30px;
+  }
+
+  .about .about-content .timeline .circle-dot {
+    width: 12px;
+    height: 12px;
+    left: 0;
+  }
+
+  .about .about-content .timeline .timeline-text {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .about .about-content .info-item {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .about .about-content .about-text h3 {
+    font-size: 22px;
+  }
+
+  .about .about-content .about-text p {
+    font-size: 15px;
+  }
+
+  .about .about-content .skills .skill-item h5 {
+    font-size: 15px;
+  }
+
+  .about .about-content .timeline .timeline-title {
+    font-size: 17px;
+  }
+
+  .about .about-content h3.title {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 576px) {
+  .about .about-content .timeline .timeline-text {
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+  .about .about-content .timeline .timeline-title {
+    font-size: 16px;
+  }
+
+  .about .about-content .timeline .timeline-date {
+    font-size: 13px;
+  }
+
+  .about .about-content .skills .skill-item .skill-percent {
+    top: -30px;
+    font-size: 12px;
+  }
+
+  .about .about-content .buttons .btn {
+    font-size: 14px;
+    padding: 10px 20px;
+  }
+}
+
+/* ==================================== */
+/* responsive services */
+.services .services-item {
+  margin-bottom: 30px;
+  flex: 0 0 33.33%;
+  max-width: 33.33%;
+  padding: 15px;
+}
+
+/* Responsive for Tablets */
+@media (max-width: 991px) {
+  .services .services-item {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+}
+
+/* Responsive for Mobile */
+@media (max-width: 767px) {
+  .services .services-item {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+
+
+/* ==================================== */
+/* portfolio services */
+.portfolio .portfolio-item {
+  flex: 0 0 33.33%;
+  max-width: 33.33%;
+  padding: 15px;
+  box-sizing: border-box;
+}
+
+/* Tablet View (2 columns) */
+@media (max-width: 991px) {
+  .portfolio .portfolio-item {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+}
+
+/* Mobile View (1 column) */
+@media (max-width: 767px) {
+  .portfolio .portfolio-item {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+/* ==================================== */
+/* contact services */
+/* Contact Title & Subtitle */
+.contact-title,
+.contact-sub-title {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.contact-title {
+  color: var(--skin-color);
+  font-size: 25px;
+}
+.contact-sub-title {
+  color: var(--text-black-900);
+  font-size: 15px;
+  margin-bottom: 40px;
+}
+
+/* Contact Info */
+.contact .contact-info-item {
+  flex: 0 0 25%;
+  max-width: 25%;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.contact .contact-info-item .icon i {
+  font-size: 25px;
+  color: var(--skin-color);
+}
+
+.contact .contact-info-item h4 {
+  font-size: 18px;
+  font-weight: 700;
+  margin: 15px 0 5px;
+  color: var(--text-black-900);
+}
+
+.contact .contact-info-item p {
+  font-size: 16px;
+  line-height: 25px;
+  color: var(--text-black-700);
+}
+
+/* Contact Form */
+.contact-form-box {
+  background-color: var(--bg-black-100);
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-item {
+  padding: 0 15px;
+  width: 100%;
+  box-sizing: border-box;
+}
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+.form-group label {
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: var(--text-black-900);
+}
+
+.form-control {
+  padding: 12px 15px;
+  font-size: 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: var(--bg-black-100);
+}
+.form-control:focus {
+  outline: none;
+  border-color: var(--skin-color);
+  box-shadow: 0 0 0 3px rgba(0, 150, 255, 0.1);
+}
+textarea.form-control {
+  resize: vertical;
+}
+
+/* Responsive Layout */
+@media (max-width: 991px) {
+  .contact .contact-info-item {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+}
+@media (max-width: 767px) {
+  .contact .contact-info-item {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
