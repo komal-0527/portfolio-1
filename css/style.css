@@ -24,10 +24,14 @@ body.dark {
   --text-black-700: #dfdfdf;
   /* --skin-color: #e9e9e9; */
 }
-#home,#about,#services,#contact,#portfolio{
-  color: var( --text-black-700);
+#home,
+#about,
+#services,
+#contact,
+#portfolio {
+  color: var(--text-black-700);
 }
-html{
+html {
   scroll-behavior: smooth;
 }
 /* =========================== */
@@ -204,6 +208,7 @@ body {
   content: "";
   width: 20px;
   height: 20px;
+  /* background-color: #ddd; */
   position: absolute;
 }
 
@@ -222,7 +227,7 @@ body {
 }
 
 .aside .nav-toggler {
-  display: none; 
+  display: none;
   height: 40px;
   width: 45px;
   position: fixed;
@@ -276,7 +281,20 @@ body {
   min-height: 100vh;
   display: flex;
   align-items: center;
-  color: var(--text-black-900);
+}
+.home .home-img {
+  flex: 0 0 40%;
+  max-width: 40%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.home .home-info {
+  flex: 0 0 60%;
+  max-width: 60%;
+  padding-right: 20px;
 }
 
 .home .home-img img {
@@ -286,11 +304,27 @@ body {
   border-radius: 5px;
   margin: auto;
 }
+.home-img::before,
+.home-img::after {
+  content: "";
+  position: absolute;
+  height: 80px;
+  width: 80px;
+}
 
-.home .home-info {
-  flex: 0 0 60%;
-  max-width: 60%;
-  padding-right: 20px;
+.home-img::before {
+  top: -40px;
+  left: 40px;
+  border-top:  10px solid var(--skin-color);
+  border-left:  10px solid var(--skin-color);
+}
+
+.home-img::after {
+  right: 40px;
+  bottom: -40px;
+  border-bottom: 10px solid var(--skin-color);
+  border-right: 10px solid var(--skin-color);
+
 }
 
 h3.hello {
@@ -316,41 +350,9 @@ h3.my-profession {
 
 .home-info p {
   font-size: 20px;
-  color: var(--text-black-700);
   margin-bottom: 70px;
 }
 
-.home .home-img {
-  flex: 0 0 40%;
-  max-width: 40%;
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.home-img::before,
-.home-img::after {
-  content: "";
-  position: absolute;
-  height: 80px;
-  width: 80px;
-  border: 10px solid var(--skin-color);
-}
-
-.home-img::before {
-  top: -40px;
-  left: 40px;
-  border-bottom: none;
-  border-right: none;
-}
-
-.home-img::after {
-  right: 20px;
-  bottom: -40px;
-  border-top: none;
-  border-left: none;
-}
 
 /* =========================== */
 /*         About Section       */
@@ -680,15 +682,13 @@ h3.my-profession {
   margin: 15px 0 5px;
 }
 
-.contact .contact-info-item p{
+.contact .contact-info-item p {
   font-size: 16px;
   line-height: 25px;
   color: var(--text-black-700);
   font-weight: 400;
 }
-.contact .contact-info-item .linkedin{
-    color: var(--text-black-700);
-}
+
 .contact-form-box {
   background-color: var(--bg-black-100);
   padding: 30px;
@@ -696,7 +696,7 @@ h3.my-profession {
   box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
   flex: 0 0 100%;
   max-width: 100%;
-  margin: 0 auto; 
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -707,7 +707,7 @@ h3.my-profession {
   flex-direction: column;
   width: 100%;
 }
-.form-item{
+.form-item {
   flex: 0 0 100%;
   padding: 5px 40px;
 }
@@ -724,7 +724,6 @@ h3.my-profession {
   border: 1px solid #ddd;
   border-radius: 8px;
   background-color: var(--bg-black-100);
- 
 }
 
 .form-control:focus {
@@ -733,6 +732,7 @@ h3.my-profession {
   box-shadow: 0 0 0 3px rgba(0, 150, 255, 0.1);
 }
 
-
-
-
+.form-item button:hover {
+  border: 1px solid #fff !important;
+  cursor: pointer;
+}
