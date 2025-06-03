@@ -2,6 +2,13 @@
 
 /* RESPONSIVE ASIDE FOR MOBILE */
 /* Responsive Aside for Tablets and Mobiles */
+@media (max-width: 1200px) {
+  .container {
+    padding: 0 30px;
+  }
+}
+
+/* Main layout and section padding */
 @media (max-width: 991px) {
   .aside {
     position: fixed;
@@ -10,64 +17,43 @@
     width: 270px;
     height: 100%;
     background: var(--bg-black-100);
-    transition: left 0.3s ease;
     z-index: 1000;
+    transition: left 0.3s ease;
   }
 
   .aside.open {
     left: 0;
   }
 
-  .main-content {
-    width: 100%;
-    padding-left: 0;
-    transition: none; /* No shift or animation */
-  }
-
+  .main-content,
   .section {
-    margin-left: 0 !important; /* Prevent shift */
-    transition: none;
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
   }
 
   .nav-toggler {
     display: flex !important;
     position: fixed;
-    left: 15px;
-    top: 15px;
-    background-color: #fff;
-    border-radius: 5px;
-    padding: 5px;
+    left: 20px;
+    top: 20px;
     z-index: 1100;
+    background: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
     cursor: pointer;
   }
 }
 
-/* Refined Styles for Small Devices (Optional Override) */
 @media (max-width: 768px) {
-  .aside {
-    width: 250px;
-    left: -250px;
+  .section {
+    padding: 20px 15px;
+    text-align: center;
   }
 
-  .aside.open {
-    left: 0;
-  }
-
-  .section,
-  .main-content {
-    margin-left: 0 !important;
-    padding-left: 0 !important;
-    width: 100%;
-  }
-
-  .nav-toggler {
-    top: 20px;
-    left: 20px;
-    z-index: 1100;
-  }
-
-  .aside-open .section {
-    margin-left: 0 !important;
+  body {
+    overflow-x: hidden;
   }
 }
 

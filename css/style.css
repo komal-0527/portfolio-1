@@ -67,7 +67,7 @@ body {
 .section {
   background-color: var(--bg-black-900);
   min-height: 100vh;
-  padding: 0 30px;
+  padding: 0 50px;
   display: block;
 }
 /* =========================== */
@@ -208,7 +208,6 @@ body {
   content: "";
   width: 20px;
   height: 20px;
-  /* background-color: #ddd; */
   position: absolute;
 }
 
@@ -315,8 +314,8 @@ body {
 .home-img::before {
   top: -40px;
   left: 40px;
-  border-top:  10px solid var(--skin-color);
-  border-left:  10px solid var(--skin-color);
+  border-top: 10px solid var(--skin-color);
+  border-left: 10px solid var(--skin-color);
 }
 
 .home-img::after {
@@ -324,7 +323,6 @@ body {
   bottom: -40px;
   border-bottom: 10px solid var(--skin-color);
   border-right: 10px solid var(--skin-color);
-
 }
 
 h3.hello {
@@ -352,7 +350,6 @@ h3.my-profession {
   font-size: 20px;
   margin-bottom: 70px;
 }
-
 
 /* =========================== */
 /*         About Section       */
