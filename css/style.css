@@ -341,15 +341,24 @@ h3.my-profession {
   font-size: 30px;
   margin: 15px 0;
 }
-
-.typing {
-  color: var(--skin-color);
-}
-
 .home-info p {
   font-size: 20px;
   margin-bottom: 70px;
 }
+.typing {
+  color: var(--skin-color);
+}
+.typing::after {
+  content: "|";
+  animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+
 
 /* =========================== */
 /*         About Section       */
